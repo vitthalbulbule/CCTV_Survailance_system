@@ -30,4 +30,4 @@ class KeypointBuffer:
     def remove_person(self, person_id):
 
         if person_id in self.buffers:
-            del self.buffers[person_id]
+            del self.buffers[person_id]     
