@@ -33,7 +33,7 @@ class PoseTracker:
         results = self.model.track(
             frame,
             persist=True,
-            tracker="bytetrack.yaml",
+            tracker="bytetrack_custom.yaml",
             classes=[0],
             conf=0.10,
             imgsz=960,
@@ -193,7 +193,7 @@ class PoseTracker:
 
 def main():
 
-    video_path = video_path = "dataset/videos/non_fighting/no10_xvid.mp4"
+    video_path = "dataset/videos/fighting/fi10_xvid.mp4"
 
     cap = cv2.VideoCapture(video_path)
 
@@ -217,7 +217,7 @@ def main():
 
         # Print information for current frame
         print(
-            print(f"Frame {frame_count} | People detected: {len(people)}")
+            f"Frame {frame_count} | People detected: {len(people)}"
         )
 
         for person in people:
